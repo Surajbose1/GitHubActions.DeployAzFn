@@ -1,4 +1,4 @@
-name: deploy-function
+name: deploy-azure-function
 
 on:
   push:
