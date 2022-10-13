@@ -60,7 +60,7 @@ jobs:
         with:
           inlineScript: |
               $profile = ""
-              $profile = Get-AzWebAppSlotPublishingProfile -ResourceGroupName {{env.RESOURCE_GROUP_NAME}} -Name {{env.FUNCTION_APP_NAME}} -Slot {{env.PRE_LIVE_SLOT_NAME}}
+              $profile = Get-AzWebAppSlotPublishingProfile -ResourceGroupName ${{env.RESOURCE_GROUP_NAME}} -Name ${{env.FUNCTION_APP_NAME}} -Slot ${{env.PRE_LIVE_SLOT_NAME}}
               $profile = $profile.Replace("`r", "").Replace("`n", "")
               Write-Output "::set-output name=pubprofile::$profile"
               Remove-Variable profile
@@ -92,4 +92,4 @@ jobs:
           enable-AzPSSession: true
 
       - name: Swap slots
-        run: az webapp deployment slot swap -s {{env.PRE_LIVE_SLOT_NAME}} -n {{env.FUNCTION_APP_NAME}} -g {{env.RESOURCE_GROUP_NAME}}
+        run: az webapp deployment slot swap -s ${{env.PRE_LIVE_SLOT_NAME}} -n ${{env.FUNCTION_APP_NAME}} -g ${{env.RESOURCE_GROUP_NAME}}
