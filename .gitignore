@@ -1,0 +1,10 @@
+﻿################################################################################
+# This .gitignore file was automatically created by Microsoft(R) Visual Studio.
+################################################################################
+
+/SampleFunction/.vs/SampleFunction/FileContentIndex
+/.vs/GitHubActions.DeployAzFn/v17
+/.vs/slnx.sqlite
+/.vs/VSWorkspaceState.json
+/SampleFunction/.vs/SampleFunction/config/applicationhost.config
+/SampleFunction/.vs/SampleFunction/v17/.suo
