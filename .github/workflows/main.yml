@@ -2,9 +2,9 @@ name: deploy-azure-function
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ "master" ]
+    branches: [ "main" ]
     
 env:
   AZURE_FUNCTIONAPP_NAME: 'fnsb20221012'
